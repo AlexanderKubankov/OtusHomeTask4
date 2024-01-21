@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: home-task-4-deployment
+  labels:
+    app: home-task-4
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: home-task-4
+  template:
+    metadata:
+      labels:
+        app: home-task-4
+    spec:
+      containers:
+      - name: api
+        image: kubik27/api:20240121182733
+        env:
+        - name: ConnectionStrings__DataContext
+          valueFrom:
+            secretKeyRef:
+              name: connection-string-secret
+              key: DataContext
+        ports:
+        - containerPort: 8080

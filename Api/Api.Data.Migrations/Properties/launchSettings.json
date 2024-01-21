@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Api.Data.Migrations": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

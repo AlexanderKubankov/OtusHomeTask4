@@ -1,0 +1,5 @@
+connection string=Host=localhost;Port=5432;Database=HomeTask3;Username=postgres;Password=karleone
+Host=localhost;Port=5432;Database=HomeTask3;Username=postgres;Password=karleone
+Host=localhost;Port=5432;Database=HomeTask3;Username=postgres;Password=karleone
+Host=localhost;Port=5432;Database=HomeTask3;Username=postgres;Password=karleone
+Host=localhost;Port=5432;Database=HomeTask3;Username=postgres;Password=karleone

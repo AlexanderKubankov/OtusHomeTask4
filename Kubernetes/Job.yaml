@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hometask4migrationsjob
+spec:
+  template:
+    spec:
+      containers:
+      - name: apidatamigrations 
+        image: kubik27/apidatamigrations:hometask4migrations
+        env:
+        - name: ConnectionStrings__DataContext
+          valueFrom:
+            secretKeyRef:
+              name: connection-string-secret
+              key: DataContextMigrations
+      restartPolicy: Never
+  backoffLimit: 4
